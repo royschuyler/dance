@@ -16,10 +16,12 @@ function plot(ticker){
 
   //DANCE
   var tPeak = radians(bounceVar[ticker]);
-  var start = danceSpinArr[ticker];
+  // var start = (danceSpinArr[ticker]+ 0.1);
+  var start = (.1);
+  console.log(start)
 
   //OTHER DANCE
-  var dDance = 200;
+  var dDance = 50;
   var start2 = -start;
   var t1 = radians(12);
   var t2 = radians(10);
@@ -31,7 +33,7 @@ function plot(ticker){
 
   var dance = makeDancer(dDance,tPeak,start,start2,t1,t2,t3,t4,f,v,sized);
 
-  var extra = 'blinewidth 2 all' + '</br>' + 'drawframe no' + '</br>' + 'asetticks x no' + '</br>' + 'asetticks y no' + '</br>' + 'asetminticks x no' + '</br>' + 'asetminticks y no' + '</br>' +'framewidth 0' + '</br>' + 'bstyle yes no no no no no no yes no no 0' + '</br>' + 'margins 0 0 0 0' + '</br>' + 'range x '  + -plotSize + ' ' + plotSize + '</br>' + 'range y ' + -plotSize + ' ' + plotSize;
+  var extra = 'blinewidth 2 all' + '</br>' + 'drawframe no' + '</br>' + 'asetticks x no' + '</br>' + 'asetticks y no' + '</br>' + 'asetminticks x no' + '</br>' + 'asetminticks y no' + '</br>' +'framewidth 0' + '</br>' + 'bstyle yes no no no no no no yes no no all' + '</br>' + 'margins 0 0 0 0' + '</br>' + 'range x '  + -plotSize + ' ' + plotSize + '</br>' + 'range y ' + -plotSize + ' ' + plotSize;
   var location = '</br>' + 'savejpg /Users/royschuyler/Desktop/auto2/' + ticker + '.jpg 2' + '</br>';
   finish = dance + extra;
   return finish
